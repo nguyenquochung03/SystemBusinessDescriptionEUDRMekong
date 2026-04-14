@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EUDR Mekong System Report - Ecotech 2A</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .flow-step:hover .step-icon { transform: scale(1.1); transition: all 0.3s ease; }
+        .gradient-bg { background: linear-gradient(135deg, #065f46 0%, #059669 100%); } /* Emerald theme to match Quasa */
+        .mekong-accent { color: #10b981; }
+        .trace-line { position: relative; }
+        .trace-line::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            width: 2px;
+            height: 20px;
+            background: #cbd5e1;
+            transform: translateX(-50%);
+        }
+        .highlight-card {
+            background: linear-gradient(to right, #f0fdf4, #ffffff);
+            border-left: 4px solid #10b981;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Header / Navigation -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-emerald-600 rounded flex items-center justify-center text-white font-bold">M</div>
+                    <span class="text-xl font-bold text-emerald-800 tracking-tight">EUDR MEKONG</span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-500">
+                    <a href="#overview" class="hover:text-emerald-600">Tổng quan</a>
+                    <a href="#structure" class="hover:text-emerald-600">Cấu trúc Ga</a>
+                    <a href="#workflow" class="hover:text-emerald-600">Luồng nghiệp vụ</a>
+                    <a href="#quy-kho" class="hover:text-emerald-600">Quy Khô</a>
+                    <a href="#factory" class="hover:text-emerald-600">Nhà máy</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span class="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full font-semibold">Báo cáo nội bộ</span>
+                    <span class="text-slate-400 text-sm">14/04/2026</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="overview" class="gradient-bg text-white py-16 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Hệ thống Quản lý Vòng đời Nguyên liệu & Nhà máy</h1>
+            <p class="text-emerald-50 text-lg max-w-3xl mx-auto mb-8">
+                Số hóa từ khâu phân công tại vườn cây đến lưu trữ thành phần tại nhà máy, tối ưu hóa chuỗi giá trị cao su Mekong.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl w-48 border border-white/20">
+                    <div class="text-3xl font-bold mb-1">Cố định</div>
+                    <div class="text-xs uppercase tracking-wider opacity-80">Hệ số Quy Khô</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl w-48 border border-white/20">
+                    <div class="text-3xl font-bold mb-1">Chủ động</div>
+                    <div class="text-xs uppercase tracking-wider opacity-80">Đội trưởng điều xe</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl w-48 border border-white/20">
+                    <div class="text-3xl font-bold mb-1">2 Lớp</div>
+                    <div class="text-xs uppercase tracking-wider opacity-80">Lưu trữ Nhà máy</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-12 space-y-24">
+
+        <!-- Data Structure Section: Ga Architecture -->
+        <section id="structure">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-800">Cấu trúc Phân cấp Dữ liệu (Ga)</h2>
+                <p class="text-slate-500 mt-2">Truy vết ngược từ Nhà máy về đến từng chuyến mủ của Công nhân tại Ga.</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-4 w-full text-center">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 trace-line">
+                        <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-industry"></i>
+                        </div>
+                        <h3 class="font-bold">Đội / Vườn</h3>
+                        <p class="text-xs text-slate-400 mt-1 uppercase">Cấp 1: Doanh nghiệp</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 trace-line">
+                        <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-house-signal"></i>
+                        </div>
+                        <h3 class="font-bold">Ga</h3>
+                        <p class="text-xs text-slate-400 mt-1 uppercase italic font-semibold">Cấp 2: Nhóm & Điểm gom</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 trace-line">
+                        <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-map"></i>
+                        </div>
+                        <h3 class="font-bold">Lô khai thác</h3>
+                        <p class="text-xs text-slate-400 mt-1 uppercase">Cấp 3: Vùng địa lý</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 trace-line">
+                        <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-seedling"></i>
+                        </div>
+                        <h3 class="font-bold">Phần cây</h3>
+                        <p class="text-xs text-slate-400 mt-1 uppercase">Cấp 4: Đơn vị vi mô</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-emerald-200">
+                        <div class="w-12 h-12 bg-emerald-700 text-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg shadow-emerald-200">
+                            <i class="fa-solid fa-user-tag"></i>
+                        </div>
+                        <h3 class="font-bold">Công nhân x Chuyến</h3>
+                        <p class="text-xs text-emerald-600 mt-1 uppercase font-bold">Cấp 5: Theo chuyến xe</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Unique Business Logic: Quy Kho Doc Lap -->
+        <section id="quy-kho" class="p-8 rounded-3xl highlight-card shadow-sm border border-emerald-100">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-emerald-600 font-bold text-xs uppercase tracking-widest">Đặc thù Mekong</span>
+                    <h2 class="text-2xl font-black text-slate-800 mt-2 mb-4 italic">Cơ chế Quy Khô Độc Lập</h2>
+                    <p class="text-slate-700 leading-relaxed mb-6">
+                        Khác với các hệ thống thông thường, EUDR Mekong cho phép Đội trưởng <strong>Xác nhận Quy Khô</strong> bất cứ lúc nào. Hệ thống tính toán dựa trên <strong>hệ số cố định theo loại mủ</strong> (ví dụ: mủ chén 44%, mủ dây 55%), không phụ thuộc vào kết quả DRC từ nhà máy tra về.
+                    </p>
+                    <div class="flex gap-4">
+                        <div class="bg-white p-4 rounded-xl border border-emerald-200 shadow-sm flex-1">
+                            <div class="text-emerald-700 font-black text-xl">44%</div>
+                            <div class="text-xs text-slate-500 uppercase font-bold">Mủ đông chén</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-emerald-200 shadow-sm flex-1">
+                            <div class="text-emerald-700 font-black text-xl">55%</div>
+                            <div class="text-xs text-slate-500 uppercase font-bold">Mủ dây</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-emerald-900 text-white p-8 rounded-2xl relative overflow-hidden shadow-xl">
+                    <h4 class="font-bold mb-4 text-emerald-300">Lợi ích Quản trị:</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-bolt text-amber-400"></i>
+                            <span>Quy khô tức thời, không cần chờ Nhà máy duyệt.</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-calculator text-amber-400"></i>
+                            <span>Tính lương công nhân theo từng chuyến xe tại Ga.</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-shield-halved text-amber-400"></i>
+                            <span>Phân tách trách nhiệm dữ liệu rõ ràng giữa Vườn và Nhà máy.</span>
+                        </li>
+                    </ul>
+                    <div class="absolute -bottom-6 -right-6 text-white/5 text-8xl">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Workflow -->
+        <section id="workflow" class="bg-white rounded-3xl p-8 shadow-xl border border-slate-100">
+            <h2 class="text-3xl font-bold text-slate-800 mb-12 flex items-center gap-3">
+                <i class="fa-solid fa-route text-emerald-600"></i> Luồng nghiệp vụ Chi tiết
+            </h2>
+
+            <div class="space-y-16">
+                <!-- Phase 1 -->
+                <div class="flex flex-col lg:flex-row gap-10">
+                    <div class="lg:w-1/3">
+                        <h4 class="text-emerald-700 font-black uppercase text-sm tracking-widest mb-2">Giai đoạn 1</h4>
+                        <h3 class="text-xl font-bold text-slate-800">Cấu hình Đội & Ga</h3>
+                        <p class="text-slate-500 text-sm mt-3">Đội trưởng thực hiện bộ 3 thao tác: Danh sách lao động -> Quản lý Ga (gán Lô/Công nhân) -> Phân công đi cạo theo từng Phiên.</p>
+                    </div>
+                    <div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-4 bg-slate-50 rounded-xl border-l-4 border-emerald-500">
+                            <h5 class="font-bold text-sm text-emerald-800">Phân công theo Phiên</h5>
+                            <p class="text-xs text-slate-600 mt-1">Gán Phần cây chi tiết cho từng công nhân trong phiên khai thác để truy vết nguồn gốc.</p>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-xl border-l-4 border-emerald-500">
+                            <h5 class="font-bold text-sm text-emerald-800">Ghi nhận theo Chuyến</h5>
+                            <p class="text-xs text-slate-600 mt-1">Sản lượng công nhân tại Ga được nhập theo chuyến (1, 2, 3...) để khớp với các xe vận chuyển.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="flex flex-col lg:flex-row gap-10">
+                    <div class="lg:w-1/3">
+                        <h4 class="text-emerald-700 font-black uppercase text-sm tracking-widest mb-2">Giai đoạn 2</h4>
+                        <h3 class="text-xl font-bold text-slate-800">Điều phối Chủ động</h3>
+                        <p class="text-slate-500 text-sm mt-3">Đội trưởng trực tiếp tạo lệnh <strong>Điều xe cho mủ</strong>, chọn lộ trình qua các Ga và các chuyến mủ tương ứng.</p>
+                    </div>
+                    <div class="lg:w-2/3 bg-slate-50 p-6 rounded-2xl flex items-center justify-center gap-12 text-emerald-600">
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center mx-auto mb-2"><i class="fa-solid fa-truck-pickup"></i></div>
+                            <span class="text-xs font-bold">Tạo Chuyến xe</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-right text-slate-300"></i>
+                        <div class="text-center text-emerald-500">
+                            <div class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center mx-auto mb-2"><i class="fa-solid fa-clipboard-check"></i></div>
+                            <span class="text-xs font-bold">Giao mủ (Ga)</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-right text-slate-300"></i>
+                        <div class="text-center text-slate-600">
+                            <div class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center mx-auto mb-2"><i class="fa-solid fa-building-flag"></i></div>
+                            <span class="text-xs font-bold">Về Nhà máy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="flex flex-col lg:flex-row gap-10">
+                    <div class="lg:w-1/3">
+                        <h4 class="text-emerald-700 font-black uppercase text-sm tracking-widest mb-2">Giai đoạn 3</h4>
+                        <h3 class="text-xl font-bold text-slate-800">Tiếp nhận Nhà máy</h3>
+                        <p class="text-slate-500 text-sm mt-3">Nhà máy thực hiện <strong>Cân lại</strong> và <strong>Nhập DRC chung</strong> cho toàn đội. Cơ chế phân quyền tách biệt giữa SL và DRC.</p>
+                    </div>
+                    <div class="lg:w-2/3 space-y-4">
+                        <div class="bg-emerald-50 border border-emerald-100 p-4 rounded-xl">
+                            <h5 class="font-bold text-emerald-800 text-sm mb-1 italic">D-Variance Control:</h5>
+                            <p class="text-xs text-emerald-700 leading-relaxed">Hệ thống tự động tính toán chênh lệch sản lượng giữa số liệu Đội/Ga gửi đi và số liệu Nhà máy cân thực tế tại trạm.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Factory Storage: 2-Layer System -->
+        <section id="factory">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-800">Hệ thống Lưu trữ Nhà máy (2 Lớp)</h2>
+                <p class="text-slate-500 mt-2">Quản lý tồn kho nguyên liệu theo từng Bãi và Ngăn chứa sau can.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-slate-50 rounded-bl-full -mr-16 -mt-16 group-hover:bg-emerald-50 transition-colors"></div>
+                    <h4 class="font-black text-emerald-700 uppercase tracking-tighter text-lg mb-4">Lớp 1: Bãi chứa mủ tạp</h4>
+                    <p class="text-sm text-slate-600 mb-6">Nguyên liệu từ nhiều xe có thể được gộp chung vào một Bãi chứa mủ tạp để chuẩn bị xử lý.</p>
+                    <div class="flex items-center gap-2 text-xs font-bold text-emerald-600">
+                        <i class="fa-solid fa-circle-arrow-right"></i> Đưa sản lượng xe vào Bãi
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-slate-50 rounded-bl-full -mr-16 -mt-16 group-hover:bg-emerald-50 transition-colors"></div>
+                    <h4 class="font-black text-emerald-700 uppercase tracking-tighter text-lg mb-4">Lớp 2: Ngăn chứa mủ sau can</h4>
+                    <p class="text-sm text-slate-600 mb-6">Sau khi bãi mủ tạp hoàn thành xử lý, sản lượng được chuyển vào các Ngăn chứa thành phẩm tương ứng.</p>
+                    <div class="flex items-center gap-2 text-xs font-bold text-emerald-600">
+                        <i class="fa-solid fa-circle-arrow-right"></i> Chuyển Bãi vào Ngăn chứa
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Summary & Key Differences -->
+        <section class="bg-slate-900 rounded-[3rem] p-12 text-white">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-black mb-4">Tổng kết Kỹ thuật & Nghiệp vụ</h2>
+                <div class="h-1 w-24 bg-emerald-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-6 bg-white/5 border border-white/10 rounded-2xl border-l-4 border-emerald-500">
+                    <i class="fa-solid fa-toggle-on text-emerald-400 text-2xl mb-4"></i>
+                    <h5 class="font-bold mb-2">DRC Chung Toàn Đội</h5>
+                    <p class="text-xs text-slate-400">Chỉ số DRC tại Nhà máy áp dụng chung cho toàn bộ intake của một Đội trong phiên làm việc, không tách rời từng xe.</p>
+                </div>
+                <div class="p-6 bg-white/5 border border-white/10 rounded-2xl border-l-4 border-emerald-500">
+                    <i class="fa-solid fa-user-lock text-emerald-400 text-2xl mb-4"></i>
+                    <h5 class="font-bold mb-2">Phân quyền Tách biệt</h5>
+                    <p class="text-xs text-slate-400">Quyền nhập Sản lượng và quyền nhập DRC tại Nhà máy là hai thực thể độc lập để tránh thao túng dữ liệu.</p>
+                </div>
+                <div class="p-6 bg-white/5 border border-white/10 rounded-2xl border-l-4 border-emerald-500">
+                    <i class="fa-solid fa-rotate text-emerald-400 text-2xl mb-4"></i>
+                    <h5 class="font-bold mb-2">Nhập mủ theo Chuyến</h5>
+                    <p class="text-xs text-slate-400">Duy nhất tại Mekong, sản lượng công nhân được bóc tách theo từng chuyến xe để phục vụ luồng vận chuyển Ga-Nhà máy.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-slate-400 text-sm font-semibold italic">© 2026 Ecotech 2A. Tài liệu nội bộ Team Kỹ thuật - EUDR Mekong System.</p>
+            <p class="text-slate-300 text-xs mt-2 uppercase tracking-widest font-black">Nguyen Quoc Hung Report</p>
+        </div>
+    </footer>
+
+</body>
+</html>
